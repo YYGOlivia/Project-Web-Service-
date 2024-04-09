@@ -4,7 +4,8 @@
 This project aims to develop a web service and client for managing movie and actor data. It involves creating services that allow for adding movies, adding actors, linking movies to actors, and retrieving information based on movie titles or actor names. Additionally, the client interacts with the OMDB API to provide movie rankings, enriching the information available to end-users. This system utilizes RESTful web services for efficient data management and integration with third-party APIs.
 
 ## Team Member
-name:Yige YANG   e-mail:yygolivia@gmail.com
+name: Yige YANG   
+e-mail: yygolivia@gmail.com
 
 ## Introduction
 This project aims to provide a comprehensive movie management service, enabling users to add movies and actors, link actors to movies, and retrieve detailed information about movies or actors. Built with Java and utilizing RESTful web services, it serves both as a data repository and an interface to the OMDB API for movie rankings. The project is structured into two main components: the server-side services and the client application.
@@ -28,7 +29,6 @@ The client application is designed to interact with our service layer, utilizing
 1. **Adding Movies**: The user starts by adding two movies through the client application:
    - The first movie, "Inception" (2010), is added, generating a unique movie ID (e.g., ID: 1) upon successful addition.
    - The second movie, "Titanic" (1997), is subsequently added, receiving another unique movie ID (e.g., ID: 2).
-
 
 2. **Adding an Actor**: After adding the movies, the user adds "Leonardo DiCaprio" as an actor. This action assigns a unique actor ID (e.g., ID: 1) to Leonardo DiCaprio.
 
