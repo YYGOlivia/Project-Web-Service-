@@ -1,8 +1,10 @@
 # Project Title: Movie Management Service
 
-## Description 
+## Description    
 This project aims to develop a web service and client for managing movie and actor data. It involves creating services that allow for adding movies, adding actors, linking movies to actors, and retrieving information based on movie titles or actor names. Additionally, the client interacts with the OMDB API to provide movie rankings, enriching the information available to end-users. This system utilizes RESTful web services for efficient data management and integration with third-party APIs.
-#This system utilizes both SOAP and REST methods for implementation
+
+## This system utilizes both SOAP and REST methods for implementation
+
 
 ## Team Member
 name: Yige YANG   
@@ -43,7 +45,6 @@ The client application is designed to interact with our service layer, utilizing
    - Similarly, the user requests details for "Titanic". The application again provides comprehensive information, including the movie's cast, showing Leonardo DiCaprio as part of it, and ratings from the OMDB API (e.g., "Rated: PG-13", "IMDb Rating: 7.9/10").
 
 5. **Use Case Outcome**: This detailed scenario showcases the application's capabilities in managing movie and actor data, establishing relationships between them, and integrating external API data (OMDB ratings) to enrich the information provided to the user.
-
 
 
 ## Source Code
