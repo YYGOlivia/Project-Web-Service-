@@ -2,6 +2,7 @@
 
 ## Description 
 This project aims to develop a web service and client for managing movie and actor data. It involves creating services that allow for adding movies, adding actors, linking movies to actors, and retrieving information based on movie titles or actor names. Additionally, the client interacts with the OMDB API to provide movie rankings, enriching the information available to end-users. This system utilizes RESTful web services for efficient data management and integration with third-party APIs.
+#This system utilizes both SOAP and REST methods for implementation
 
 ## Team Member
 name: Yige YANG   
