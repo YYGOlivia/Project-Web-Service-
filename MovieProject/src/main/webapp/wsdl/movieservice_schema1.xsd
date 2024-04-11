@@ -1,0 +1,131 @@
+<xs:schema xmlns:tns="http://service.movie.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://service.movie.com/" version="1.0">
+
+  <xs:element name="addActor" type="tns:addActor"/>
+
+  <xs:element name="addActorResponse" type="tns:addActorResponse"/>
+
+  <xs:element name="addMovie" type="tns:addMovie"/>
+
+  <xs:element name="addMovieResponse" type="tns:addMovieResponse"/>
+
+  <xs:element name="getActorsByMovie" type="tns:getActorsByMovie"/>
+
+  <xs:element name="getActorsByMovieResponse" type="tns:getActorsByMovieResponse"/>
+
+  <xs:element name="getMovieByTitle" type="tns:getMovieByTitle"/>
+
+  <xs:element name="getMovieByTitleResponse" type="tns:getMovieByTitleResponse"/>
+
+  <xs:element name="getMovieRating" type="tns:getMovieRating"/>
+
+  <xs:element name="getMovieRatingResponse" type="tns:getMovieRatingResponse"/>
+
+  <xs:element name="getMoviesByActor" type="tns:getMoviesByActor"/>
+
+  <xs:element name="getMoviesByActorResponse" type="tns:getMoviesByActorResponse"/>
+
+  <xs:element name="linkMovieToActor" type="tns:linkMovieToActor"/>
+
+  <xs:element name="linkMovieToActorResponse" type="tns:linkMovieToActorResponse"/>
+
+  <xs:complexType name="getMovieRating">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMovieRatingResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addMovie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:movie"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="movie">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="title" type="xs:string"/>
+      <xs:element name="year" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addMovieResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getActorsByMovie">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getActorsByMovieResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:actor"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="actor">
+    <xs:sequence>
+      <xs:element name="id" type="xs:int"/>
+      <xs:element minOccurs="0" name="name" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addActor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="tns:actor"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addActorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMoviesByActor">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMoviesByActorResponse">
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" minOccurs="0" name="return" type="tns:movie"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMovieByTitle">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="getMovieByTitleResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="return" type="tns:movie"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="linkMovieToActor">
+    <xs:sequence>
+      <xs:element name="arg0" type="xs:int"/>
+      <xs:element name="arg1" type="xs:int"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="linkMovieToActorResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean"/>
+    </xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
