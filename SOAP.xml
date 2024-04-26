@@ -1,0 +1,150 @@
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.movie.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" name="MovieServiceService" targetNamespace="http://service.movie.com/">
+<wsdl:types>
+<schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://service.movie.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns="http://www.w3.org/2001/XMLSchema">
+<import namespace="http://service.movie.com/" schemaLocation="http://localhost:8080/com.movie/services/movieservice?xsd=movieservice_schema1.xsd"/>
+</schema>
+</wsdl:types>
+<wsdl:message name="getMovieByTitleResponse">
+<wsdl:part element="tns:getMovieByTitleResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getMovieRating">
+<wsdl:part element="tns:getMovieRating" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addMovie">
+<wsdl:part element="tns:addMovie" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addMovieResponse">
+<wsdl:part element="tns:addMovieResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getActorsByMovie">
+<wsdl:part element="tns:getActorsByMovie" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addActor">
+<wsdl:part element="tns:addActor" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getMoviesByActor">
+<wsdl:part element="tns:getMoviesByActor" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getMoviesByActorResponse">
+<wsdl:part element="tns:getMoviesByActorResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="linkMovieToActorResponse">
+<wsdl:part element="tns:linkMovieToActorResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getMovieRatingResponse">
+<wsdl:part element="tns:getMovieRatingResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="addActorResponse">
+<wsdl:part element="tns:addActorResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getMovieByTitle">
+<wsdl:part element="tns:getMovieByTitle" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="linkMovieToActor">
+<wsdl:part element="tns:linkMovieToActor" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:message name="getActorsByMovieResponse">
+<wsdl:part element="tns:getActorsByMovieResponse" name="parameters"> </wsdl:part>
+</wsdl:message>
+<wsdl:portType name="MovieService">
+<wsdl:operation name="getMovieRating">
+<wsdl:input message="tns:getMovieRating" name="getMovieRating"> </wsdl:input>
+<wsdl:output message="tns:getMovieRatingResponse" name="getMovieRatingResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addMovie">
+<wsdl:input message="tns:addMovie" name="addMovie"> </wsdl:input>
+<wsdl:output message="tns:addMovieResponse" name="addMovieResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getActorsByMovie">
+<wsdl:input message="tns:getActorsByMovie" name="getActorsByMovie"> </wsdl:input>
+<wsdl:output message="tns:getActorsByMovieResponse" name="getActorsByMovieResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addActor">
+<wsdl:input message="tns:addActor" name="addActor"> </wsdl:input>
+<wsdl:output message="tns:addActorResponse" name="addActorResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getMoviesByActor">
+<wsdl:input message="tns:getMoviesByActor" name="getMoviesByActor"> </wsdl:input>
+<wsdl:output message="tns:getMoviesByActorResponse" name="getMoviesByActorResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getMovieByTitle">
+<wsdl:input message="tns:getMovieByTitle" name="getMovieByTitle"> </wsdl:input>
+<wsdl:output message="tns:getMovieByTitleResponse" name="getMovieByTitleResponse"> </wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="linkMovieToActor">
+<wsdl:input message="tns:linkMovieToActor" name="linkMovieToActor"> </wsdl:input>
+<wsdl:output message="tns:linkMovieToActorResponse" name="linkMovieToActorResponse"> </wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="MovieServiceServiceSoapBinding" type="tns:MovieService">
+<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="getMovieRating">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getMovieRating">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getMovieRatingResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addMovie">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="addMovie">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addMovieResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getActorsByMovie">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getActorsByMovie">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getActorsByMovieResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="addActor">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="addActor">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="addActorResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getMoviesByActor">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getMoviesByActor">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getMoviesByActorResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="getMovieByTitle">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="getMovieByTitle">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="getMovieByTitleResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="linkMovieToActor">
+<soap:operation soapAction="" style="document"/>
+<wsdl:input name="linkMovieToActor">
+<soap:body use="literal"/>
+</wsdl:input>
+<wsdl:output name="linkMovieToActorResponse">
+<soap:body use="literal"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="MovieServiceService">
+<wsdl:port binding="tns:MovieServiceServiceSoapBinding" name="MovieServicePort">
+<soap:address location="http://localhost:8080/com.movie/services/movieservice"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>
